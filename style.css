@@ -1,0 +1,180 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #202124; /* Tema escuro */
+    color: #fff;
+    display: flex; /* Habilita flexbox no corpo */
+    flex-direction: column; /* Define a direção do flexbox como coluna */
+    min-height: 100vh; /* Define a altura mínima do corpo como 100% da tela */
+ /* Efeito Mica - precisa de suporte a backdrop-filter */
+    backdrop-filter: blur(10px); /* Aplica blur ao fundo */
+    -webkit-backdrop-filter: blur(10px);
+  /* background-color: rgba(255, 255, 255, 0.1); /* Define uma cor de fundo translúcida */
+
+  }
+  
+  /* Menu Lateral */
+  #sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: -250px; /* Inicia o menu fora da tela */
+    top: 0;
+    z-index: 10;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out; /* Adiciona transição para animação */
+  }
+  
+  #sidebar.show {
+    left: 0; /* Move o menu para a tela quando estiver ativo */
+  }
+  
+  .nav-link {
+    color: #fff;
+  }
+  
+  .nav-link.active {
+    background-color: #282c34;
+    border-left: 4px solid #0078d7; /* Cor azul do Fluent UI */
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #282c34; /* Cor de fundo do cabeçalho */
+    padding: 15px 0; /* Espaçamento interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Conteúdo Principal */
+  #main-content {
+    padding: 20px; /* Adiciona padding ao main-content */
+    margin: 0 auto; /* Centraliza o main-content horizontalmente */
+    width: 90%; /* Define a largura do main-content para 90% */
+    max-width: 80%; /* Define a largura máxima do main-content para 1200px */
+    display: flex; /* Habilita flexbox dentro do main-content */
+    flex-direction: column; /* Define a direção do flexbox como coluna */
+    min-height: calc(100vh - 64px); /* Define a altura mínima do main-content para 100% da tela menos a altura do header */
+  }
+  
+  /* Container dos Cards */
+  #card-container {
+
+    display: flex; /* Habilita flexbox no container */
+    flex-wrap: wrap; /* Permite quebra de linha para cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+  }
+  
+  /* ... (código CSS anterior) ... */
+
+/* Cards */
+.card {
+    margin-bottom: 20px; /* Adiciona margem inferior aos cards */
+    border-radius: 12px;
+    background-color: #282c34;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0px; /* Adiciona padding aos cards */
+    color: #fff;
+    /* Adiciona margem lateral aos cards */
+    margin-right: 10px;
+    /* Define a largura máxima do card */
+    max-width: 400px;
+    /* Centraliza o conteúdo do card */
+    display: flex;
+    height: 55vh;
+    flex-direction: column;
+    align-items: center; 
+    /* Garante que o card ocupe todo o espaço disponível */
+    width: 100%;
+  }
+  
+  /* Adiciona margem à última coluna para evitar espaçamento extra */
+  .card:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  /* Estilo para a imagem do card */
+  .card-image {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: 55%; /* A altura da imagem se ajusta automaticamente */
+    object-fit: cover; /* Ajusta a imagem ao tamanho do container */
+    border-radius: 12px 12px 0 0; /* Arredonda os cantos superiores da imagem */
+    margin-bottom: 10px; /* Adiciona margem inferior à imagem */
+  }
+  
+  /* Estilos para o conteúdo do card */
+  .card-content {
+    margin-left: 20px;
+    padding: 0 20px; /* Adiciona margem interna ao conteúdo */
+    text-align: center; /* Centraliza o conteúdo */
+    width: 90%; /* Define a largura do conteúdo */
+  }
+  
+  .card-title {
+    margin-left: 20px;
+    font-size: 1.3em; /* Define o tamanho da fonte do título */
+    margin-bottom: 5px; /* Adiciona margem inferior ao título */
+  }
+
+   .card-stars {
+    margin-bottom: 10px; /* Adiciona margem inferior às estrelas */
+  }
+  
+  .card-star {
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: #b30000; /* Amarelo para as estrelas */
+  }
+  
+  .card-category,
+  .card-subcategory {
+    margin-left: 20px;
+    font-size: 1em;
+    margin-bottom: 5px; /* Adiciona margem inferior às categorias */
+  }
+  
+  /* Estilos para o botão "Detalhes" */
+  .card-button {
+    margin: 20px;
+    background-color: #0078d7; /* Azul do Fluent UI */
+    color: #fff;
+    padding: 10px 20px; /* Adiciona padding ao botão */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold; /* Define a fonte do botão como negrito */
+  }
+  
+  /* ... (código CSS restante) ... */
+  /* Estilos da barra de pesquisa */
+  .input-group {
+    width: 100%; /* Define a largura da barra de pesquisa */
+  }
+
+  .modal {
+    position: absolute;
+    /* Estilos do modal em tema escuro */
+    width: 100vw; /* Largura total da tela */   
+    height: 100vh; /* Altura total da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro transparente */
+  }
+  
+  .modal-content {
+    background-color: #282c34; /* Fundo escuro do conteúdo do modal */
+    color: #fff; /* Cor do texto em branco */
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #444; /* Separador escuro */
+  }
+  
+  .modal-title {
+    color: #fff; /* Cor do título em branco */
+  }
+  
+  .modal-body {
+    color: #fff; /* Cor do texto em branco */
+  }
+  
+  .btn-close {
+    background-color: #444; /* Fundo escuro do botão de fechar */
+    color: #fff; /* Cor do botão em branco */
+  }
