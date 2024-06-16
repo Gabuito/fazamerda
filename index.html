@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,8 +68,35 @@
 
       <main class="col-md-9 col-lg-10 ps-md-2 pt-3" id="main-content">
         <div class="page" id="home">
-          <h1>Bem-vindo ao meu site!</h1>
-          <p>Conteúdo da página inicial.</p>
+            <img src="./img/ditadores.png" alt="Ditadores" style="width: 100%; height: 300px; object-fit: cover; object-position: 0px 2px;" class="img-fluid rounded">
+            <hr/>
+          <h1>Dando nomes aos bois...</h1>
+          <p>O objetivo desse site é divulgar figuras publicas que :</p>
+
+          <div class="row">
+            <div class="col-4" data-bs-theme="dark">
+              <div id="list-example" class="list-group"  data-bs-theme="dark">
+                <a class="list-group-item list-group-item-action"  data-bs-theme="dark" href="#list-item-1">Item 1</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                <h4 id="list-item-1">Item 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus id rem repellat perferendis officiis, eveniet, esse quos non, eligendi eaque quas ut. Accusantium hic ipsam tempora voluptatem minus atque sit!</p>
+                <h4 id="list-item-2">Item 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam aspernatur ipsa fugiat saepe esse obcaecati. Eligendi neque, consectetur asperiores unde a molestias soluta aliquam id consequatur et corporis placeat quia!</p>
+                <h4 id="list-item-3">Item 3</h4>
+                <p>...</p>
+                <h4 id="list-item-4">Item 4</h4>
+                <p>...</p>
+              </div>
+            </div>
+          </div>
+
+         
         </div>
 
         <div class="page" id="sobre" style="display: none;">
